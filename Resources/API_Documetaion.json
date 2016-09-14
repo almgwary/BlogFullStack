@@ -1,0 +1,94 @@
+[
+  {
+    "path": "url/post",
+    "HttpMethod": "put",
+    "request opject": {
+      "content": "[string]content of post"
+    },
+    "response": {
+      "id": "[string] id of new post"
+    },
+    "Description": "Create New Post"
+  },
+  {
+    "path": "url/post",
+    "HttpMethod": "get",
+    "request opject": {
+      "id": "[string] user id,  if there is no user id responce with latest posts like facebook wall"
+    },
+    "response": {
+      "id": "[string] post id",
+      "time": "[int]linux time stamp",
+      "content": "[string] post content",
+      "likeCount": "[int]number of liks for currnet post",
+      "isLike": "[boolean] if currnt logged in user like this post",
+      "owner": {
+        "id": "[string] id of post owner",
+        "name": "[string] name of post owner",
+        "email": "[string] email of post owner",
+        "avatar_url": "[string] avatar of post owner"
+      }
+    },
+    "Description": "Get Post for user, if there is no user id responce with latest posts like facebook wall"
+  },
+  {
+    "path": "url/like",
+    "HttpMethod": "post",
+    "request opject": {
+      "id": "[string] post id"
+    },
+    "response": {
+      "id": "[string] post id",
+      "isLike": "[string]current loged in user status for this post"
+    },
+    "Description": "Toggel Post Like"
+  },
+  {
+    "path": "url/user",
+    "HttpMethod": "get",
+    "request opject": {
+      "id": "[string] if for user"
+    },
+    "response": {
+      "id": "[string] user id",
+      "name": "[string] user name",
+      "email": "[string] user email",
+      "avatar_url": "[string] user avatar"
+    },
+    "Description": " Get user Inforamtion"
+  },
+  {
+    "path": "url/login",
+    "HttpMethod": "get",
+    "request opject": {
+      "email": "[string] user email",
+      "password": "[string] user password"
+    },
+    "response": {
+      "id": "[string] user id",
+      "AuthToken": "[string]",
+      "avatar_url": "[string]",
+      "name": "[string]",
+      "email": "[string]"
+    },
+    "Description": "Login User"
+  },
+  {
+    "path": "url/signup",
+    "HttpMethod": "get",
+    "request opject": {
+      "email": "[string]",
+      "avatar_url": "[string]",
+      "password": "[string]",
+      "name": "[string]"
+    },
+    "response": {
+      "id": "[string]",
+      "AuthToken": "[string]",
+      "name": "[string]",
+      "email": "[string]",
+      "avatar_url": "[string]"
+    },
+    "Description": "Sign up new user"
+  }
+]
