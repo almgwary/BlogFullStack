@@ -46,6 +46,8 @@ Start First App
 -app:container of our applictation
     |-boot.ts: starting module in our application .
     |-app.component.ts:root component in application
+    |-*.js : compiled file
+    |-*map : used in debug to map javascript line to TypeScript line
 -tsconfig.json: configration file for type script compiler to change TypeScript to javascript
 -typings.json: config for TypeScript used when import javascript libraries 
 -backage.json:standard node backage configration
