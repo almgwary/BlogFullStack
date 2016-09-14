@@ -16,7 +16,7 @@ full stack blog with angular2, android and ruby
 
 ## Mobile
 <p align="center">
-  <img src="https://raw.githubusercontent.com/almgwary/BlogFullStack/master/Resources/PSD%20and%20wireframe/01-%20Page%20Login.png" width="350"/>
+  <img src="https://raw.githubusercontent.com/almgwary/BlogFullStack/master/Resources/PSD%20and%20wireframe/04-%20Page%20Profile.png" width="350"/>
   <img src="https://raw.githubusercontent.com/almgwary/BlogFullStack/master/Resources/PSD%20and%20wireframe/02-%20Page%20SignUp.png" width="350"/>
 </p>
 <p align="center">
