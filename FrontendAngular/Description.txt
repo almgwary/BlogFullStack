@@ -1,0 +1,57 @@
+Course: Angular2 with TypeScript.
+Instructor: Amr Almgwary
+Email:almgwaryfci@gmail.com
+
+--------------------------------------------
+what is Angular ?
+    - leading javascript framwork
+    - used to build heavy javascript applications
+    - used to build SPA 'singel page applications'
+    - MVC and make sepration and concerns
+
+what is SPA ? 
+    - no relad in html, we only change view based on page state
+    - gmail is SPA
+
+why angular ?
+    - leading framwork and suported by google.
+    
+
+# we will start on angular2, no need any knowledge for angular1.
+# we will use TypeScript which is super set of javascript, it add some features not in javascript like moduels, classes and access modifers and compile time checking 
+
+--------------------------------------------
+Archticture of Angular2
+[ Component - Directives - Routes - Services ] 
+    1.Component : has veiw,data,and controller [login - signup - home - profile ]
+                  it is just class have variables and methods
+                  connection between view and controller made by binding [for methods and variables]
+    2.Service : class which capsolation for any thing not related to view [ http request - calculations ]
+    3.Router : navigate user frome view to view and handel which component should be renderd
+    4.Directive : change behaviour of DOM element
+
+
+--------------------------------------------
+Development Envireonment 
+1.git
+2.NodeJs
+3.TypeScript [ open terminal run: 'npm install -g typescript' ]
+4.Typings [ open terminal run: 'npm install -g typings' ] // module to get javascript libraries to typescript
+5.VS Code editor [free version from microsoft]
+6.chrome
+
+
+--------------------------------------------
+Start First App
+-app:container of our applictation
+    |-boot.ts: starting module in our application .
+    |-app.component.ts:root component in application
+-tsconfig.json: configration file for type script compiler to change TypeScript to javascript
+-typings.json: config for TypeScript used when import javascript libraries 
+-backage.json:standard node backage configration
+
+[ open terminal/ open project folder/ run: 'npm install' ]
+[ open terminal/ open project folder/ run: 'npm start' ] : this will start server in watch mood and run TypeScript compiler
+
+
+    
