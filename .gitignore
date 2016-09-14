@@ -24,6 +24,6 @@ FrontendAngular/folder
 # ignore node_modules
 FrontendAngular/node_modules/
 # ignore compilled files
-FrontendAngular/*/*.js
-FrontendAngular/*/*.map
+FrontendAngular/**/*.js
+FrontendAngular/**/*.map 
 
