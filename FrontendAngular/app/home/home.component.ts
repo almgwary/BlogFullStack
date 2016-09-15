@@ -1,11 +1,12 @@
 import {Component} from 'angular2/core';
 import {Post} from "../post/post.component";
+import {PostForm} from "../postForm/postForm.component"
  
 @Component({
     selector:'home',
     templateUrl:'app/home/view/home.view.html',
     styleUrls:['app/home/style/home.style.css'],
-    directives:[Post]
+    directives:[Post,PostForm]
 })
 export class HomeComponent { 
 
