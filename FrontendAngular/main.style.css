@@ -1,3 +1,22 @@
-   body {
-          background: #f0f0f0;
-      }
+/***
+==========================================
+                  Fonts
+==========================================
+***/
+
+/*Ropoto*/
+@import url("resources/fonts/Roboto-fontFace.css");
+
+
+
+
+/***
+==========================================
+            Global Settings
+==========================================
+***/
+body {
+      background: #f0f0f0;
+      font-family: 'Roboto-Regular';
+      color: #9a9a9a;
+}
