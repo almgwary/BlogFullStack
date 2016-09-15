@@ -1,0 +1,37 @@
+  <!--Start Post Card-->
+    <div class="col-md-12 card post ">
+          <span class="avatar_url">
+              <img src="{{post.owner.avatar_url}}"/>
+          </span>
+          <span class="information">
+            <div class="row"> 
+                <!--Start Name and Time-->
+                <div class="col-md-12 post-header">
+                    <span class="name">{{post.owner.name}}</span>
+                    <span class="time-ago">{{post.time}}</span>
+                </div>
+                <!--End Name and Time-->
+                <div class="divider"></div>
+                <!--Start Post Content-->
+                <div class="col-md-12">
+                    <p class="post-content">
+                       {{post.content}}
+                    </p>
+                </div>
+                <!--End Post Content-->
+                <!--Start Like container-->
+                <div class="col-md-12">
+                    <span class="like-container pull-right">
+                        <span class="like-icon"
+                              [class.active]="post.isLike"
+                              (click)=" toggelLike()"></span>
+                        <span class="like-count" >{{ post.likeCount}}</span>
+                    </span>
+                </div>
+                <!--End Like container-->
+
+            </div>
+        </span>
+    </div>
+    <!--End Post Card-->
+
