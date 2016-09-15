@@ -7,7 +7,12 @@ import {Component} from 'angular2/core'
     
 })
 export class Signup {
-    constructor(){}
+    avatars = [];
+    constructor(){
+        // creat avatars urls
+        for(var i=0;i<25;++i)
+            this.avatars.push('resources/img/avatars/'+i.toString()+'.png');
+    }
     user={
         email:"",
         password:"",

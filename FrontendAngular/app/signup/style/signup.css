@@ -88,3 +88,20 @@ button:hover {
           transform: translateY(-3px);
   box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
 }
+
+
+.avatars-conatiner {
+    width: 69%;
+    display: block;
+    margin: auto;
+    margin-bottom: 18px;
+}
+.avatars-conatiner img {
+    width: 25px;
+    display: inline-block;
+    cursor: pointer;
+    margin: 5px;
+}
+.avatars-conatiner img:hover {
+    transform: scale(2);
+    }

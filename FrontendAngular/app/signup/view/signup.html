@@ -1,11 +1,15 @@
   <!--Start Post Card-->
     <div class="card">
           <span class="logo">
-              <img src="resources/img/icons/LOGO.png"/>
+              <img src="{{user.avatar_url || 'resources/img/icons/LOGO.png'}}"/>
           </span>
             <input placeholder="Name" type="text" required=""  [(ngModel)]="user.name">
             <input placeholder="Email" type="email" required=""  [(ngModel)]="user.email">
             <input placeholder="Password" type="password" required=""  [(ngModel)]="user.password">
+            <span class="avatars-conatiner">
+              <img *ngFor="#avatar of avatars" src="{{avatar}}"  (click)="user.avatar_url = avatar"/>
+            </span>
+           
             <button (click)="signup()">signup</button>
            
     </div>
