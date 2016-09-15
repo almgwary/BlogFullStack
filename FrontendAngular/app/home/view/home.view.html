@@ -1,0 +1,6 @@
+<p>Home</p>
+<div class="post-container" *ngFor="#post of posts">
+        <post  [post]="post"
+               (likeAction)="toggelPostLike($event)">
+        </post>
+</div>
