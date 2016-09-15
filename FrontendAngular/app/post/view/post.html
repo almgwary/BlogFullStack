@@ -25,7 +25,7 @@
                         <span class="like-icon"
                               [class.active]="post.isLike"
                               (click)=" toggelLike()"></span>
-                        <span class="like-count" >{{ post.likeCount}}</span>
+                        <span class="like-count" >{{ post.likeCount | countAverage}}</span>
                     </span>
                 </div>
                 <!--End Like container-->
