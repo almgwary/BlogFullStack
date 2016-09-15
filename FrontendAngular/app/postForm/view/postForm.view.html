@@ -1,0 +1,37 @@
+  <!--Start PostForm Card-->
+    <div class="col-md-12 card post ">
+          <span class="avatar_url">
+              <img src="resources/img/avatars/1.png"/>
+          </span>
+          <span class="information">
+            <div class="row"> 
+                <!--Start Name-->
+                <div class="col-md-12 post-header">
+                    <span class="name">Nour Ahmed Ali</span> 
+                </div>
+                <!--End Name-->
+                <div class="divider"></div>
+                <!--Start PostForm Content-->
+                <div class="col-md-12">
+                    <textarea 
+                            class="post-content" 
+                            maxlength="140"
+                            placeholder="Hack The World =D !" 
+                            [(ngModel)]="content">
+                    </textarea>
+                       
+                </div>
+                <!--End PostForm Content-->
+                <!--Start count container-->
+                <div class="col-md-12">
+                    <span class="count-container pull-right">
+                        <span class="count" > {{content.toString().length}}/140</span>
+                    </span>
+                </div>
+                <!--End count container-->
+
+            </div>
+        </span>
+    </div>
+    <!--End PostForm Card-->
+
