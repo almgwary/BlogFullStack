@@ -35,6 +35,8 @@
       System.import('app/boot')
             .then(null, console.error.bind(console));
     </script>
+    <!--The <base href="/"> tells the Angular router what is the static part of the URL. The router then only modifies the remaining part of the URL.-->
+    <base href="/">
   </head>
 
   <!-- 3. Display the application -->
