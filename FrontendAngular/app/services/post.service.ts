@@ -10,7 +10,11 @@ export class PostService {
     constructor(private http: Http){}
     private postsURL = "resources/mocks/posts.json";
     private userPostsURL = "resources/mocks/userposts.json";
-
+    
+    addPost(post){
+      // handel request here
+      console.log("adding posr");
+    }
     getPosts(userId): Observable<Object[]> {
     if(userId){
       // get profile posts by user id
