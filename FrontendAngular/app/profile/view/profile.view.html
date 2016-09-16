@@ -1,0 +1,16 @@
+<p>Home</p>
+<div class="head-container card">
+     <span class="avatar_url">
+              <img src="resources/img/avatars/18.png"/>
+     </span>
+     <div class="col-md-12 information">
+                    <span class="name">Name Of Me</span>
+                    <span class="email">my@emaol.com</span>
+    </div>
+</div>
+<div class="post-container" >
+        <post  *ngFor="#post of posts" 
+               [post]="post"
+               (likeAction)="toggelPostLike($event)">
+        </post>
+</div>
