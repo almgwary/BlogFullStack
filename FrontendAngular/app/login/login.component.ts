@@ -1,6 +1,6 @@
 import {Component} from 'angular2/core'
 import {UserService} from "../services/user.service"
-
+import {SharedService}from '../services/shared.service'
 @Component({
     selector:'login',
     templateUrl:'app/login/view/login.html',
@@ -9,7 +9,7 @@ import {UserService} from "../services/user.service"
     
 })
 export class Login {
-    constructor(private userService:UserService){}
+    constructor(private userService:UserService,private sharedService:SharedService){}
     user = {
         email:"",
         password:""
@@ -21,6 +21,7 @@ export class Login {
         .subscribe(
             user => {
                 console.log("succsfull logedin up ",user);
+                this.sharedService.setActiveUser(user);
             },
             error => {
                 // handel error here

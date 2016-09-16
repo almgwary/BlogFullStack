@@ -6,8 +6,8 @@ import {Signup} from '../signup/signup.component';
 import {Fab} from '../fab/fab.component';
 // ROUTER_DIRECTIVES : to user [routerLink] in navigation 
 // RouteConfig : to set router configrations
-import {ROUTER_DIRECTIVES,RouteConfig} from 'angular2/router'
-
+import {ROUTER_DIRECTIVES,RouteConfig,Router} from 'angular2/router'
+import {SharedService}from '../services/shared.service'
 @Component({
     selector: 'my-app',
     templateUrl:'app/root/view/app.view.html',
@@ -26,4 +26,19 @@ import {ROUTER_DIRECTIVES,RouteConfig} from 'angular2/router'
     redirectTo: ['Home']
   }
 ])
-export class AppComponent { }
+export class AppComponent { 
+  constructor(private sharedService:SharedService,private router:Router){
+    sharedService.activeUserChange.subscribe(
+      activeUser => { 
+            console.log("root notified with active user change",activeUser);
+            if(activeUser && activeUser.hasOwnProperty('id')){
+              //navigate to home
+               this.router.navigate(['Home',{}]);
+            }else{
+              // navigate to login page
+              this.router.navigate(['Login',{}]);
+            }
+          }
+    )
+  }
+}
