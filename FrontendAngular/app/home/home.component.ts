@@ -2,7 +2,8 @@ import {Component} from 'angular2/core';
 import {Post} from "../post/post.component";
 import {PostForm} from "../postForm/postForm.component"
 import {PostService} from "../services/post.service"
- 
+import {SharedService}from '../services/shared.service'
+
 @Component({
     selector:'home',
     templateUrl:'app/home/view/home.view.html',
@@ -13,7 +14,9 @@ import {PostService} from "../services/post.service"
 export class HomeComponent { 
   posts=[];
   errorMessage :any;
-  constructor(private postService:PostService){
+  constructor(private postService:PostService,private sharedService:SharedService){
+    
+     this.sharedService.setFabState('home');
      this.postService.getPosts(null)
                    .subscribe(
                      posts => this.posts = posts,

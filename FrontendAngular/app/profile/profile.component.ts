@@ -3,7 +3,7 @@ import {Post} from "../post/post.component";
 import {PostService} from "../services/post.service"
 import {UserService} from "../services/user.service"
 import {RouteParams } from 'angular2/router';
-
+import {SharedService}from '../services/shared.service'
  
 @Component({
     selector:'profile',
@@ -17,14 +17,14 @@ export class ProfileComponent {
   errorMessage :any;
   userId : string ; 
   user= null ;
-  constructor(private postService:PostService, private userService:UserService, private params: RouteParams){
+  constructor(private postService:PostService, private userService:UserService, private params: RouteParams,private sharedService:SharedService){
     this.userId = params.get("id");
     if ( this.userId){
         // handel  another user actions
     }else {
         // handel this active user actions
     }
-      
+     this.sharedService.setFabState('profile');
      this.userService.getUserInformation(this.userId)
                     .subscribe(
                         user => this.user = user ,
