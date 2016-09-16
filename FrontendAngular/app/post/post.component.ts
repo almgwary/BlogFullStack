@@ -1,11 +1,12 @@
 import {Component,Input,Output,EventEmitter} from 'angular2/core'
 import {CountAverage} from '../pipes/countAverage.pipe'
-
+import {ROUTER_DIRECTIVES} from 'angular2/router'
 @Component({
     selector:'post',
     templateUrl:'app/post/view/post.html',
     styleUrls:['app/post/style/post.css'],
-    pipes:[CountAverage]
+    pipes:[CountAverage],
+    directives:[ROUTER_DIRECTIVES]
     
 })
 export class Post {
