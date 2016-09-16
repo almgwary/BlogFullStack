@@ -10,6 +10,7 @@ export class SharedService {
      // create Subject  for each variable 
     // current logged in user opject
     public activeUser = new Subject<Object>();
+    public activeUserValue:Object ;
     // state of fab button [ home - profile]
     public fabState= new Subject<string>();
     // post form content 
@@ -27,7 +28,9 @@ export class SharedService {
 
     setActiveUser(activeUser:any) {
       console.log('almg shared service change activeUser',activeUser);
+      this.activeUserValue = activeUser ;
       this.activeUser.next(activeUser);
+      
     }
     setFabState(fabState:any) {
        console.log('almg shared service change fabState',fabState);
