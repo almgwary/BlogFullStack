@@ -10,7 +10,7 @@ export class SharedService {
      // create Subject  for each variable 
     // current logged in user opject
     public activeUser = new Subject<Object>();
-    // state of fab button [ logout - add-post - back]
+    // state of fab button [ home - profile]
     public fabState= new Subject<string>();
     // post form content 
     public postFormContent= new Subject<string>();
