@@ -17,7 +17,7 @@ import {ROUTER_DIRECTIVES,RouteConfig} from 'angular2/router'
 // set router opjects 
 @RouteConfig([ 
   {path:'/home',name:'Home',component:HomeComponent,useAsDefault:true},
-  {path:'/profile',name:'Profile',component:ProfileComponent},
+  {path:'/profile/:id',name:'Profile',component:ProfileComponent},
   {path:'/login',name:'Login',component:Login},
   {path:'/signup',name:'Signup',component:Signup},
   // else
