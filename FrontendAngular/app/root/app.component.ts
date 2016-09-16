@@ -16,14 +16,14 @@ import {SharedService}from '../services/shared.service'
 })
 // set router opjects 
 @RouteConfig([ 
-  {path:'/home',name:'Home',component:HomeComponent,useAsDefault:true},
+  {path:'/home',name:'Home',component:HomeComponent},
   {path:'/profile/:id',name:'Profile',component:ProfileComponent},
-  {path:'/login',name:'Login',component:Login},
+  {path:'/login',name:'Login',component:Login,useAsDefault:true},
   {path:'/signup',name:'Signup',component:Signup},
   // else
   {
     path: '/**',
-    redirectTo: ['Home']
+    redirectTo: ['Login']
   }
 ])
 export class AppComponent { 
