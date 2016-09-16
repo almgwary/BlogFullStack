@@ -2,6 +2,8 @@ import {Component} from 'angular2/core';
 import {Post} from "../post/post.component";
 import {PostService} from "../services/post.service"
 import {UserService} from "../services/user.service"
+import {RouteParams } from 'angular2/router';
+
  
 @Component({
     selector:'profile',
@@ -13,9 +15,16 @@ import {UserService} from "../services/user.service"
 export class ProfileComponent { 
   posts=[];
   errorMessage :any;
-  userId = 1 ; 
+  userId : string ; 
   user= null ;
-  constructor(private postService:PostService, private userService:UserService){
+  constructor(private postService:PostService, private userService:UserService, private params: RouteParams){
+    this.userId = params.get("id");
+    if ( this.userId){
+        // handel  another user actions
+    }else {
+        // handel this active user actions
+    }
+      
      this.userService.getUserInformation(this.userId)
                     .subscribe(
                         user => this.user = user ,
