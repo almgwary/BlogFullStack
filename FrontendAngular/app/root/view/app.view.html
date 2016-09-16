@@ -1,9 +1,16 @@
+<!--The <base href="/"> tells the Angular router what is the static part of the URL. The router then only modifies the remaining part of the URL.-->
+<base href="/"></base>
 <div class="col-md-12" >
+    <!--navigate to link-->
+    <!--<a [routerLink]="['Profile']" >profile </a>
+    <a [routerLink]="['Home']" >home </a>-->
+
     <!--<home> </home>-->
-    <login></login>
+    <!--<login></login>-->
     <!--<signup></signup>-->
-     <!--<profile> </profile>-->
+    <!--<profile> </profile>-->
     <fab></fab>
-    
+   <!--add to view-->
+  <router-outlet></router-outlet>
 </div>
                
