@@ -19,6 +19,11 @@ import {ROUTER_DIRECTIVES,RouteConfig} from 'angular2/router'
   {path:'/home',name:'Home',component:HomeComponent,useAsDefault:true},
   {path:'/profile',name:'Profile',component:ProfileComponent},
   {path:'/login',name:'Login',component:Login},
-  {path:'/signup',name:'Signup',component:Signup}
+  {path:'/signup',name:'Signup',component:Signup},
+  // else
+  {
+    path: '/**',
+    redirectTo: ['Home']
+  }
 ])
 export class AppComponent { }
