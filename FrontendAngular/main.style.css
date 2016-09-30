@@ -20,3 +20,13 @@ body {
       font-family: 'Roboto-Regular';
       color: #9a9a9a;
 }
+
+.center-me {
+    display: block;
+    margin: auto;
+    margin-top: 28px;
+}
+.center-me a {
+    color: #9a9a9a;
+    font-family: Roboto-Bold;
+}
