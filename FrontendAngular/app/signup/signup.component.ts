@@ -1,12 +1,13 @@
 import {Component} from 'angular2/core'
 import {UserService} from "../services/user.service"
 import {SharedService}from '../services/shared.service'
-
+import {ROUTER_DIRECTIVES} from 'angular2/router'
 @Component({
     selector:'signup',
     templateUrl:'app/signup/view/signup.html',
     styleUrls:['app/signup/style/signup.css'],
-     providers:[UserService]
+    providers:[UserService],
+    directives:[ROUTER_DIRECTIVES]
     
 })
 export class Signup {
