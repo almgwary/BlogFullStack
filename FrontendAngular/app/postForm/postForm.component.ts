@@ -16,11 +16,18 @@ export class PostForm {
    constructor(private sharedService:SharedService){
       this.user = this.sharedService.activeUserValue ;
        console.log('asdx',this.user);
+       // get active user information
        this.sharedService.activeUserChange.subscribe(
            activeUser => {
                this.user = activeUser;
                console.log('asdff',this.user);
             }
+       );
+       // subscribe to post changes: mainly used to set conten or clear it 
+       this.sharedService.postFormContentChange.subscribe(
+           post => {
+               this.content = post;
+           }
        )
       
    }
