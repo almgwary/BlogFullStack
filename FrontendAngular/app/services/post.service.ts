@@ -13,7 +13,7 @@ export class PostService {
     
     addPost(post){
       // handel request here
-      console.log("adding posr");
+      console.log("PostService addPost",post);
     }
     getPosts(userId): Observable<Object[]> {
     if(userId){
