@@ -34,7 +34,9 @@ import {SharedService}from '../services/shared.service'
   }
 ])
 export class AppComponent { 
+  activeUser:any = null ;
   constructor(private sharedService:SharedService,private router:Router){
+
     sharedService.activeUserChange.subscribe(
       activeUser => { 
             console.log("root notified with active user change",activeUser);
@@ -45,6 +47,7 @@ export class AppComponent {
               // navigate to login page
               this.router.navigate(['Login',{}]);
             }
+            this.activeUser = activeUser ;
           }
     )
   }
