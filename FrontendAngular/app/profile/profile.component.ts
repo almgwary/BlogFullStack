@@ -1,3 +1,6 @@
+/**
+ * Profile : change fab state and get posts
+ */
 import {Component} from 'angular2/core';
 import {Post} from "../post/post.component";
 import {PostService} from "../services/post.service"

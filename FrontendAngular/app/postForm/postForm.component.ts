@@ -1,3 +1,6 @@
+/**
+ * Just Input for creating new Post and render active user data
+ * */
 import {Component, Input, Output, EventEmitter} from 'angular2/core'
 import {SharedService}from '../services/shared.service'
 import {ROUTER_DIRECTIVES} from 'angular2/router'

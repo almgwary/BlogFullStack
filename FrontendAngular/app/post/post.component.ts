@@ -1,3 +1,6 @@
+/**
+ * Post : jsut render post content and toggelLike of post
+ */
 import {Component,Input,Output,EventEmitter} from 'angular2/core'
 import {CountAverage} from '../pipes/countAverage.pipe'
 import {ROUTER_DIRECTIVES} from 'angular2/router'

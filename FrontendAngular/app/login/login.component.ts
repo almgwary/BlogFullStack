@@ -1,3 +1,6 @@
+/*
+ * Login Page : just make simple login function
+ * */
 import {Component} from 'angular2/core'
 import {UserService} from "../services/user.service"
 import {SharedService}from '../services/shared.service'

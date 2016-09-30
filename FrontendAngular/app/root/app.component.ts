@@ -1,3 +1,10 @@
+/**
+ * App Root 
+ * ----------------------
+ *  1. set router
+ *  2. check active user 
+ *  3. navigate to user 
+ */
 import {Component} from 'angular2/core';
 import {HomeComponent} from '../home/home.component';
 import {ProfileComponent} from '../profile/profile.component';

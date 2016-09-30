@@ -1,3 +1,11 @@
+/**
+ *      Home Page 
+ * ----------------------
+ * set fab state to home
+ * get home page posts
+ * can toggelPostLike
+ * ----------------------
+ */
 import {Component} from 'angular2/core';
 import {Post} from "../post/post.component";
 import {PostForm} from "../postForm/postForm.component"

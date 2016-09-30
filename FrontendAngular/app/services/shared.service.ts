@@ -7,7 +7,7 @@ import {Subject}    from 'rxjs/Subject'
 @Injectable()
 export class SharedService {
 
-     // create Subject  for each variable 
+    // create Subject  for each variable 
     // current logged in user opject
     public activeUser = new Subject<Object>();
     public activeUserValue:Object ;
