@@ -19,7 +19,8 @@
                             class="post-content" 
                             maxlength="140"
                             placeholder="Hack The World =D !" 
-                            [(ngModel)]="content">
+                            [(ngModel)]="content"
+                            (change)="onFormChange($event)">
                     </textarea>
                        
                 </div>

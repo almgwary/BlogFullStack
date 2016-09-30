@@ -24,4 +24,10 @@ export class PostForm {
        )
       
    }
+
+   onFormChange(event){
+       console.log('almg Form content changed',this.content);
+       this.sharedService.setPostFormContent(this.content);
+       
+   }
 }

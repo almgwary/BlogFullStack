@@ -22,6 +22,16 @@ export class Fab {
                     }
                 }
         )
+        // change state of fab with post state
+        this.sharedService.postFormContent.subscribe(
+            postContent => {
+                if(postContent && postContent.length > 0){
+                    this.state = 'add-post'
+                }else{
+                    this.state = 'logout'
+                }
+            }
+        )
     }
     // [ logout - add-post - back]
     state="back";
