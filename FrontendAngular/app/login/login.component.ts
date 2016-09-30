@@ -4,11 +4,13 @@
 import {Component} from 'angular2/core'
 import {UserService} from "../services/user.service"
 import {SharedService}from '../services/shared.service'
+import {ROUTER_DIRECTIVES} from 'angular2/router'
 @Component({
     selector:'login',
     templateUrl:'app/login/view/login.html',
     styleUrls:['app/login/style/login.css'],
-     providers:[UserService]
+    providers:[UserService],
+    directives:[ROUTER_DIRECTIVES]
     
 })
 export class Login {
