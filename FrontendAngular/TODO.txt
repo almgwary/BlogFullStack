@@ -1,6 +1,7 @@
 1. add animation
-2. addpostForm Input listener and make post request
-3. refactor shared service as Supject not give initial value
 4. add auth
 
 //worked 3 days 16h/day
+// worked 1h
+#done refactor shared service as Subject not give initial value
+#done addpostForm Input listener and make post request
