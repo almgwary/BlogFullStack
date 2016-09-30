@@ -2,19 +2,20 @@ import { Injectable }     from 'angular2/core'
 import { Http, Response } from 'angular2/http'
 import { Observable }     from 'rxjs/Observable'
 import {Subject}    from 'rxjs/Subject'
+import {BehaviorSubject}    from 'rxjs/subject/BehaviorSubject'
 
 
 @Injectable()
 export class SharedService {
 
-    // create Subject  for each variable 
+    // create BehaviorSubject  for each variable 
     // current logged in user opject
-    public activeUser = new Subject<Object>();
+    public activeUser = new BehaviorSubject<Object>(null);
     public activeUserValue:Object ;
     // state of fab button [ home - profile]
-    public fabState= new Subject<string>();
+    public fabState= new BehaviorSubject<string>('home');
     // post form content 
-    public postFormContent= new Subject<string>();
+    public postFormContent= new BehaviorSubject<string>('');
 
     // create  Observables for each variable 
     public activeUserChange = this.activeUser.asObservable();
